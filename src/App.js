@@ -27,7 +27,11 @@ class App extends Component {
   }
 
   onIncrement = evt => {
-
+    this.setState(oldState => {
+      return {
+        count: oldState.count + 1,
+      }
+    })
   }
 
   render() {
@@ -48,7 +52,12 @@ class App extends Component {
         {/* Counter should only exist if this.state.on === true */}
         {/* Counter needs data and callbacks to function */}
         {/* {this.state.on ? <Counter /> : null} */}
-        { this.state.on && <Counter /> }
+        {this.state.on && (
+          <Counter
+            count={this.state.count}
+            onIncrement={this.onIncrement}
+          />
+        )}
       </div>
     )
   }
@@ -57,11 +66,13 @@ class App extends Component {
 class Counter extends Component {
   // Make this component work
   render() {
+    const { count, onIncrement } = this.props
+
     return (
       <div className="counter" style={getStyle('green')}>
         <h4>Counter Subcomponent</h4>
-        <div>The count is 0</div>
-        <button>Increment</button>
+        <div>The count is {count}</div>
+        <button onClick={onIncrement}>Increment</button>
       </div>
     )
   }
