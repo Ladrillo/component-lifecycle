@@ -75,7 +75,7 @@ class Counter extends Component {
       the count used to be ${prevProps.count}
       but the count is now ${this.props.count}
     `);
-    if (this.props.count > 4) {
+    if (this.props.count === 5) {
       this.props.onIncrement()
     }
   }
