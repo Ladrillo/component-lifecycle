@@ -18,6 +18,16 @@ class App extends Component {
     }
   }
 
+  // useEffect(() => {
+  //   axios.get('http://localhost:4000/friends/Alison')
+  //     .then(res => {
+  //       setFriend(res.data)
+  //     })
+  //     .catch(err => {
+  //       debugger
+  //     })
+  // }, [])
+
   componentDidMount() {
     axios.get('http://localhost:4000/friends/Alison')
       .then(res => {
@@ -26,6 +36,18 @@ class App extends Component {
       .catch(err => {
         debugger
       })
+
+    axios.get('http://localhost:4000/friends/Alison/followers')
+      .then(res => {
+        this.setState({ followers: res.data })
+      })
+      .catch(err => {
+        debugger
+      })
+    
+    // Promise.all([axios.get(URL1), axios.get(URL2)])
+          // .then(([resolved1, resolved2]) => {})
+          // .catch(error => { debugger })
   }
 
   onTurn = on => { // "on" arg is either true or false
