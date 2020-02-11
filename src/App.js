@@ -46,8 +46,8 @@ class App extends Component {
 
         <div className="buttons">
           {/* Make the buttons work */}
-          <button>turn ON</button>
-          <button>turn OFF</button>
+          <button onClick={this.onTurnOn}>turn ON</button>
+          <button onClick={this.onTurnOff}>turn OFF</button>
         </div>
 
         {/* Counter should only exist if this.state.on === true */}
