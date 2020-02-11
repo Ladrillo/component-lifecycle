@@ -72,14 +72,17 @@ class Counter extends Component {
   componentDidUpdate(prevProps, prevState) {
     console.log(`💥 component was updated after the SUBSEQUENT renders`)
     console.log(`
-      the count used to be ${prevState.count}
-      but the count is now ${this.state.count}
+      the count used to be ${prevProps.count}
+      but the count is now ${this.props.count}
     `);
+    if (this.props.count > 4) {
+      this.props.onIncrement()
+    }
   }
 
-  componentWillUnmount() {
-    console.log(`💥 component about to be unmounted from DOM`)
-  }
+  // componentWillUnmount() {
+  //   console.log(`💥 component about to be unmounted from DOM`)
+  // }
 
   render() {
     const { count, onIncrement } = this.props
