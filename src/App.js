@@ -47,7 +47,8 @@ class App extends Component {
 
         {/* Counter should only exist if this.state.on === true */}
         {/* Counter needs data and callbacks to function */}
-        <Counter />
+        {/* {this.state.on ? <Counter /> : null} */}
+        { this.state.on && <Counter /> }
       </div>
     )
   }
