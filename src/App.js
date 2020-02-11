@@ -12,6 +12,8 @@ class App extends Component {
     this.state = {
       on: false,
       count: 0,
+      friend: null,
+      friendFollowers: [],
     }
   }
 
@@ -28,11 +30,15 @@ class App extends Component {
   }
 
   render() {
-    const { on } = this.state
+    const { on, friend } = this.state
 
     return (
       <div className="app" style={getStyle('black')}>
         <h4>App Component</h4>
+
+        {friend && <div>{friend.name} is {friend.age} years old</div>}
+
+
         {/* Make the OFF/ON label be state-driven */}
         <div>Subcomponents are {on ? "ON" : "OFF"}</div>
 
