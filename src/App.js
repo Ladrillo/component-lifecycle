@@ -69,6 +69,14 @@ class Counter extends Component {
     console.log(`💥 component was mounted after the FIRST render`)
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log(`💥 component was updated after the SUBSEQUENT renders`)
+    console.log(`
+      the count used to be ${prevState.count}
+      but the count is now ${this.state.count}
+    `);
+  }
+
   render() {
     const { count, onIncrement } = this.props
     console.log(`💥 component being rendered`)
