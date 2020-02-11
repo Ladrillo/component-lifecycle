@@ -57,7 +57,12 @@ class App extends Component {
 }
 
 class Counter extends Component {
-  // Make this component work
+  // Flesh out a bunch of "lifecycles"
+  constructor(props) {
+    super(props)
+    console.log(`💥 component being constructed`);
+  }
+
   render() {
     const { count, onIncrement } = this.props
 
