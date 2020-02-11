@@ -28,11 +28,13 @@ class App extends Component {
   }
 
   render() {
+    const { on } = this.state
+
     return (
       <div className="app" style={getStyle('black')}>
         <h4>App Component</h4>
         {/* Make the OFF/ON label be state-driven */}
-        <div>Subcomponents are OFF</div>
+        <div>Subcomponents are {on ? "ON" : "OFF"}</div>
 
         <div className="buttons">
           {/* Make the buttons work */}
