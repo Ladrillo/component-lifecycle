@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        The subcomponent is ON
+        The subcomponent is OFF
       </div>
     )
   }
