@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode on localhost:3000
+Runs the React app in the development mode on localhost:3000
 
 ### `npm run server`
 
