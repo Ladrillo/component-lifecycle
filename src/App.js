@@ -88,9 +88,9 @@ class Counter extends Component {
     }
   }
 
-  // componentWillUnmount() {
-  //   console.log(`💥 component about to be unmounted from DOM`)
-  // }
+  componentWillUnmount() {
+    console.log(`💥 component about to be unmounted from DOM`)
+  }
 
   render() {
     const { count, onIncrement } = this.props
