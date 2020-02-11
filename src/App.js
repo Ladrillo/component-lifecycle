@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 const getStyle = color => ({
   border: `2px solid ${color}`,
@@ -15,6 +16,16 @@ class App extends Component {
       friend: null,
       friendFollowers: [],
     }
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:4000/friends/Alison')
+      .then(res => {
+        this.setState({ friend: res.data })
+      })
+      .catch(err => {
+        debugger
+      })
   }
 
   onTurn = on => { // "on" arg is either true or false
