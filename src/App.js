@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="app" style={getStyle('black')}>
-        <h4>App component</h4>
+        <h4>App Component</h4>
         {/* Make the OFF/ON label be state-driven */}
         <div>Subcomponents are OFF</div>
 
