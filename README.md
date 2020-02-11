@@ -14,4 +14,4 @@ You will also see any lint errors in the console.
 
 ### `npm run server`
 
-Spins up a tiny RESTful API
+Spins up a tiny RESTful API on localhost:4000
