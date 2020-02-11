@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      This is the app
-    </div>
-  );
+class App extends Component {
+  // Create a slice of state called "on"
+  // This slice can be either true or false
+  // The initial value should be false
+
+  render() {
+    return (
+      <div className="app">
+        The subcomponent is ON
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
