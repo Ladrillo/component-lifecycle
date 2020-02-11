@@ -60,12 +60,18 @@ class Counter extends Component {
   // Flesh out a bunch of "lifecycles"
   constructor(props) {
     super(props)
-    console.log(`💥 component being constructed`);
+    console.log(`💥 component being constructed`)
+  }
+
+  componentDidMount() {
+    // attach code here
+    // we wish to run after React is done with DOM surgery
+    console.log(`💥 component was mounted after the FIRST render`)
   }
 
   render() {
     const { count, onIncrement } = this.props
-
+    console.log(`💥 component being rendered`)
     return (
       <div className="counter" style={getStyle('green')}>
         <h4>Counter Subcomponent</h4>
