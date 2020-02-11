@@ -15,15 +15,8 @@ class App extends Component {
     }
   }
 
-  onTurnOff = evt => {
-    // simplified form of this.setState
-    // when we don't actually need the current state
-    // to compute the new state
-    this.setState({ on: false })
-  }
-
-  onTurnOn = evt => {
-    this.setState({ on: true })
+  onTurn = on => { // "on" arg is either true or false
+    this.setState({ on })
   }
 
   onIncrement = evt => {
