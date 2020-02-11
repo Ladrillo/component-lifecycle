@@ -77,6 +77,14 @@ class Counter extends Component {
     `);
     if (this.props.count === 5) {
       this.props.onIncrement()
+      this.props.onIncrement()
+      this.props.onIncrement()
+      this.props.onIncrement()
+      this.props.onIncrement()
+      this.props.onIncrement()
+      this.props.onIncrement()
+      this.props.onIncrement()
+      this.props.onIncrement()
     }
   }
 
